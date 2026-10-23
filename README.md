@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Papers](https://img.shields.io/badge/entries-53-blue) ![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg) ![Last Updated](https://img.shields.io/badge/Updated-2026--10--23-green)
 
-**A curated list of papers, benchmarks, and systems on personal agents** — assistants centered on a *specific user*, combining personalization and proactivity.
+**A curated list of papers and benchmarks on personal agents** — assistants centered on a *specific user*, combining personalization and proactivity.
 
 ## Operational definition
 
@@ -52,9 +52,8 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - [1. Personalization (6)](#1-personalization)
 - [2. Proactivity (8)](#2-proactivity)
 - [3. Memory (8)](#3-memory)
-- [4. Harness (7)](#4-harness)
+- [4. Harness (10)](#4-harness)
 - [5. Benchmarks (19)](#5-benchmarks)
-- [6. Systems / Products (3)](#6-systems--products)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -113,6 +112,9 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - **MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation** [[paper](https://arxiv.org/abs/2606.02470)] [[code](https://github.com/wwh0411/MCP-Persona)] — *arXiv 2026.06* — Env simulation over real-world personal MCP/apps (PA harness eval). `#harness` `#MCP` `#env-synthesis` `#benchmark`
 - **MyPCBench: A Benchmark for Personally Intelligent Computer-Use Agents** [[paper](https://arxiv.org/abs/2606.16748)] — *arXiv 2026.06* — Personal desktop CUA with seeded personas and multi-app tasks. `#harness` `#GUI` `#CUA` `#benchmark`
 - **iOSWorld: A Benchmark for Personally Intelligent Phone Agents** [[paper](https://arxiv.org/abs/2606.09764)] — *arXiv 2026.06* — Personally intelligent phone-agent environment/benchmark. `#harness` `#mobile` `#GUI` `#benchmark`
+- **Muse (Meta Personal AI Agent)** [[news](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)] [[design](https://introducing.muse.ai/)] [[safety blog](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse)] — *2026.09* — Consumer personal AI agent: Secure VM + Sentinel authorization, memory, proactive goals. `#product` `#harness` `#safety`
+- **Muse Spark Safety & Preparedness Report** [[paper](https://arxiv.org/abs/2606.12429)] — *arXiv 2026.05* — Safety & preparedness report for the Muse Spark model family. `#product` `#safety` `#model`
+- **nanoMuse: An Open-Source Personal Agent for Every Device You Own** [[paper](https://arxiv.org/abs/2610.08699)] — *arXiv 2026.10* — Open-source cross-device personal agent. `#systems` `#open-source`
 
 ## 5. Benchmarks
 
@@ -137,14 +139,6 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - **VitaBench: Benchmarking LLM Agents with Versatile Interactive Tasks in Real-world Applications** [[paper](https://arxiv.org/abs/2509.26490)] — *arXiv 2025.09* — VitaBench 1.0 life-service interactive agent benchmark (precursor to 2.0). `#benchmark` `#e2e` `#harness`
 - **Personal Agent Eval (PersonalAgentEval)** [[blog](https://www.personalagenteval.com/blog/)] [[leaderboard](https://www.personalagenteval.com/)] — *2026* — Product-facing end-to-end eval of commercial personal agents (no arXiv long paper at listing time). `#benchmark` `#e2e` `#product`
 - **MemPABench** [[project](https://mempabench.com/)] — *2026* — Interaction-preference memory: when to clarify / confirm / act autonomously (project page; stable arXiv id pending). `#benchmark` `#personalization` `#memory`
-
-## 6. Systems / Products
-
-*Open-source personal agents and industrial personal-agent products (harness + safety case studies welcome).*
-
-- **Muse (Meta Personal AI Agent)** [[news](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)] [[design](https://introducing.muse.ai/)] [[safety blog](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse)] — *2026.09* — Consumer personal AI agent: Secure VM + Sentinel authorization, memory, proactive goals. `#product` `#harness` `#safety`
-- **Muse Spark Safety & Preparedness Report** [[paper](https://arxiv.org/abs/2606.12429)] — *arXiv 2026.05* — Safety & preparedness report for the Muse Spark model family. `#product` `#safety` `#model`
-- **nanoMuse: An Open-Source Personal Agent for Every Device You Own** [[paper](https://arxiv.org/abs/2610.08699)] — *arXiv 2026.10* — Open-source cross-device personal agent. `#systems` `#open-source`
 
 ## Contributing
 

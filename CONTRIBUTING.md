@@ -12,7 +12,7 @@ Typical signals:
 - Proactivity in a personal-assistant setting (clarification, ask-now-use-later, event-driven initiative, timing / interruptibility)
 - Memory mechanisms that support personalization or proactivity across sessions
 - Harness work aimed at personal agents (personal MCP/apps, device GUI for one user, isolation / authorization / HITL / injection defenses), including **environment synthesis / training environments built for personal agents**
-- Benchmarks and industrial personal-agent products/systems aligned with the above
+- Benchmarks and personal-agent harness / safety architecture work aligned with the above
 
 **Exclude** (may go in a future Related section):
 
@@ -45,6 +45,5 @@ Safety is filed under **Harness**, not as a separate definition axis.
 | Memory | Architectures, write/retrieve/update, memory→action, when-to-use alignment (methods) |
 | Harness | Personal env/tools/MCP/GUI, isolation, authz/HITL, injection/data trust, PA-targeted env synthesis; **safety ∈ harness** |
 | Benchmarks | Evaluation suites (end-to-end, atomic, mechanism, harness/safety) |
-| Systems / Products | Open-source personal agents and industrial products |
 
 Prefer newest-first within each section. One primary section per paper.
