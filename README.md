@@ -1,6 +1,6 @@
 # Awesome Personal Agent
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Papers](https://img.shields.io/badge/entries-53-blue) ![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg) ![Last Updated](https://img.shields.io/badge/Updated-2026--10--23-green)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Papers](https://img.shields.io/badge/entries-73-blue) ![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg) ![Last Updated](https://img.shields.io/badge/Updated-2026--10--24-green)
 
 **A curated list of papers and benchmarks on personal agents** — assistants centered on a *specific user*, combining personalization and proactivity.
 
@@ -24,9 +24,9 @@ User ──►│                   │──► Personal Agent behavior
               Harness (env / tools / safety)
 ```
 
-**Last updated:** 2026-10-23 (Asia/Shanghai)
+**Last updated:** 2026-10-24 (Asia/Shanghai)
 
-**Stats:** 53 curated entries (starter set of verified representatives). Links checked against arXiv API and public project pages; do not invent ids.
+**Stats:** 73 curated entries (starter set + weekly update 2026-10-24). Links checked against arXiv API and public project pages; do not invent ids.
 
 ## Inclusion criteria
 
@@ -49,11 +49,11 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - [Operational definition](#operational-definition)
 - [Inclusion criteria](#inclusion-criteria)
 - [0. Surveys (2)](#0-surveys)
-- [1. Personalization (6)](#1-personalization)
-- [2. Proactivity (8)](#2-proactivity)
-- [3. Memory (8)](#3-memory)
-- [4. Harness (10)](#4-harness)
-- [5. Benchmarks (19)](#5-benchmarks)
+- [1. Personalization (7)](#1-personalization)
+- [2. Proactivity (12)](#2-proactivity)
+- [3. Memory (10)](#3-memory)
+- [4. Harness (19)](#4-harness)
+- [5. Benchmarks (23)](#5-benchmarks)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -68,6 +68,7 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 
 *Preference extraction, utilization (incl. when not to use), update/drift, and interaction preference — methods and training.*
 
+- **Bridging Exploration and Persona: Information-Directed Dueling for Test-Time Agent Personalization** [[paper](https://arxiv.org/abs/2610.24385)] — *arXiv 2026.10* — ID-TAP: neural dueling bandit for test-time persona adaptation from pairwise user feedback. `#personalization` `#test-time` `#bandit`
 - **CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents** [[paper](https://arxiv.org/abs/2609.02265)] — *arXiv 2026.09* — Separates legitimate preference drift from memory poisoning. `#personalization` `#update` `#safety`
 - **PreCoMem: Predictive Cognitive Memory for Self-Evolving Long-Term Dialogue Agents** [[paper](https://arxiv.org/abs/2610.29467)] — *arXiv 2026.10* — Confidence-gated MAINTAIN/PROFILE/CORRECT updates for long-term dialogue. `#personalization` `#memory` `#update`
 - **From Correctness to Preference: A Framework for Personalized Agentic Reinforcement Learning** [[paper](https://arxiv.org/abs/2605.23382)] — *arXiv 2026.05* — Personalized agentic RL from correctness toward preference. `#personalization` `#RL`
@@ -79,6 +80,10 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 
 *Clarification / information seeking, ask-now-use-later, event-driven initiative, timing / interruptibility, proactive memory maintenance.*
 
+- **ProMemAgent: Long-Horizon Proactive Assistance with Context-Aware Prospective Memory from Sensory Perceptions** [[paper](https://arxiv.org/abs/2610.27400)] — *arXiv 2026.10* — Prospective memory over egocentric sensory context for delayed-intention proactive help; CPMBench. `#proactivity` `#memory` `#wearable` `#benchmark`
+- **When Should AI Chime In? Benchmarking Timely Contribution of Proactive Agents in Multi-Party Chat** [[paper](https://arxiv.org/abs/2610.25896)] — *arXiv 2026.10* — PITCH: human-judged timing of proactive contributions; models chime in too early when live. `#proactivity` `#timing` `#multi-party` `#benchmark`
+- **When Interpretations Persist: Downstream Influence in Gaze-Aware Assistants** [[paper](https://arxiv.org/abs/2610.25512)] — *arXiv 2026.10* — Retained interpretations of a user's activity shape later system-triggered outputs; evidence-bounded interpretation reduces harm. `#proactivity` `#memory` `#wearable` `#HCI`
+- **Ask Less, Ask Better: Allocating User Attention in Proactive LLM Agents with Interruption Budgets** [[paper](https://arxiv.org/abs/2610.24411)] — *arXiv 2026.10* — Interruption budgets + user-attention cost for clarification; memory of earlier answers yields better questions. `#proactivity` `#clarification` `#user-attention`
 - **Clarify the User or Verify the World? Uncertainty Routing for Proactive Agents** [[paper](https://arxiv.org/abs/2609.32255)] — *arXiv 2026.09* — Routes uncertainty to asking the user vs verifying the environment. `#proactivity` `#clarification` `#routing`
 - **Learning What to Ask for Tomorrow: Active Preference Acquisition for Long-Term Personalized Web Agents** [[paper](https://arxiv.org/abs/2610.31107)] — *arXiv 2026.10* — ActiveWebPref: ask preferences now for long-horizon web-agent reuse. `#proactivity` `#ask-now-use-later` `#web`
 - **Knowing but Not Showing: LLMs Recognize Ambiguity but Rarely Ask Clarifying Questions** [[paper](https://arxiv.org/abs/2605.25284)] — *arXiv 2026.05* — Shows models detect ambiguity yet under-ask clarifying questions. `#proactivity` `#clarification`
@@ -92,6 +97,8 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 
 *Architectures, write/retrieve/update, memory→action, and aligning when memory should be used.*
 
+- **What should AI forget? A design and taxonomy for negative space governance in AI memory** [[paper](https://arxiv.org/abs/2610.27607)] — *arXiv 2026.10* — Taxonomy of what users want kept out of assistant memory + FENCE user-rule memory gate. `#memory` `#forgetting` `#privacy` `#HCI`
+- **Learning Personalized Memory Gating from Delayed One-Sided Feedback** [[paper](https://arxiv.org/abs/2610.23812)] — *arXiv 2026.10* — User-specific fact-level memory gating as contextual apple tasting (Warm-Start UCB). `#memory` `#write-gate` `#personalization`
 - **MemT-1.0: Towards Memory-Native Evolution** [[paper](https://arxiv.org/abs/2610.26825)] — *arXiv 2026.10* — Memory-native foundation model toward evolving personal memory. `#memory` `#foundation-model`
 - **Memory-Aware Reward Modeling: Learning Human Preferences for LLM Memory Use** [[paper](https://arxiv.org/abs/2610.31272)] — *arXiv 2026.10* — Learns human preferences for *when/how* to use memory in replies. `#memory` `#alignment` `#RM`
 - **ColaBench: Evaluating Memory-Guided Knowledge Acquisition in Personal Agents** [[paper](https://arxiv.org/abs/2610.30989)] — *arXiv 2026.10* — Memory-conditioned external knowledge acquisition for personal agents (MemKB). `#memory` `#memory-to-action` `#benchmark`
@@ -105,6 +112,15 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 
 *Environment, tools, and safety for personal agents only — personal apps/MCP/accounts, device GUI, isolation/authz/HITL, injection & data trust, PA-targeted env synthesis. Safety ∈ harness.*
 
+- **Privacy Preference Controls for Agentic Systems** [[paper](https://arxiv.org/abs/2610.29929)] — *arXiv 2026.10* — Taxonomy of enforceable end-user privacy preferences for agents acting on users' behalf; MCP/A2A prototypes. `#harness` `#privacy` `#MCP`
+- **Preference Is Not Permission: Personalizing the Auto-Purchase Line in Agentic Commerce** [[paper](https://arxiv.org/abs/2610.29216)] — *arXiv 2026.10* — Learns each user's don't-buy / confirm / auto-buy boundary; models overreach on commitment. `#harness` `#authorization` `#personalization`
+- **After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents** [[paper](https://arxiv.org/abs/2610.28425)] — *EMNLP 2026 / arXiv 2026.10* — CarryoverBench: injections persisting via memory files and scheduled tasks across personal-assistant sessions. `#harness` `#injection` `#memory` `#safety` `#benchmark`
+- **Disclosure Begets Disclosure: A Self-Reinforcing Privacy Loop in LLM Agents with Persistent Memory** [[paper](https://arxiv.org/abs/2610.28315)] — *arXiv 2026.10* — Memory-conditioned replies make users disclose more personal attributes over sessions. `#harness` `#privacy` `#memory` `#safety`
+- **ClawMMU: Protection-Coherent Virtual Memory for Stateful LLM Agents** [[paper](https://arxiv.org/abs/2610.28093)] — *arXiv 2026.10* — Owner/scope/origin/authority labels on agent memory so injected content cannot act as the user. `#harness` `#memory` `#authorization` `#safety`
+- **AutoRedClaw: Automated Red-Teaming for Claw-Style Agents** [[paper](https://arxiv.org/abs/2610.27244)] [[code](https://github.com/SaFo-Lab/AutoRedClaw)] — *arXiv 2026.10* — Automated attack+environment generation for persistent personalized (OpenClaw-style) assistants. `#harness` `#red-team` `#local-agent` `#safety`
+- **Whose Credential Is It? How Owner Attribution in Agent MemoryShapes Cross-User Account Misuse** [[paper](https://arxiv.org/abs/2610.25707)] — *arXiv 2026.10* — Owner attribution in shared memory prevents agents from acting with another user's credentials. `#harness` `#memory` `#authorization` `#safety`
+- **Indistinguishable Agents: Training Agent Privacy as Twin-World Indistinguishability** [[paper](https://arxiv.org/abs/2610.25161)] — *arXiv 2026.10* — Twin-world RL so actions taken for a user do not leak the user's private facts to observers. `#harness` `#privacy` `#RL` `#safety`
+- **Can Agents Keep Secrets They Were Never Told? Benchmarking Latent Privacy Risks Across Sessions with MemJoin** [[paper](https://arxiv.org/abs/2610.24359)] — *arXiv 2026.10* — MemJoin: sensitive relations inferred by joining user memories across sessions. `#harness` `#privacy` `#memory` `#benchmark`
 - **Act on Your Behalf, Beyond Your Authorization: Benchmarking LLM Agent Authorization Alignment** [[paper](https://arxiv.org/abs/2610.27548)] [[code](https://github.com/PEACH-Research-Lab/AuthorizationBench)] — *arXiv 2026.10* — AuthorizationBench: authorization alignment beyond task completion. `#harness` `#authorization` `#safety` `#benchmark`
 - **X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems** [[paper](https://arxiv.org/abs/2610.13886)] — *arXiv 2026.10* — Red-teaming personal agents across evolving multi-service ecosystems. `#harness` `#red-team` `#safety`
 - **From Assistant to Double Agent: Formalizing and Benchmarking Attacks on OpenClaw for Personalized Local AI Agent** [[paper](https://arxiv.org/abs/2602.08412)] — *arXiv 2026.02* — Attack formalization/benchmark on personalized local OpenClaw-style agents. `#harness` `#local-agent` `#safety`
@@ -120,6 +136,10 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 
 *Evaluation suites for personal agents (end-to-end, personalization/proactivity/memory atomic, mechanism). Harness/safety benches that are primarily env+security are listed under Harness above and tagged `#benchmark`.*
 
+- **OptionWorld: A Benchmark for Diagnosing Failures of LLMs as Long-Term Personal Assistants** [[paper](https://arxiv.org/abs/2610.28491)] — *arXiv 2026.10* — Traces information, judgment, action and outcome in multi-day daily-life tasks to locate follow-through failures. `#benchmark` `#e2e` `#long-horizon`
+- **MOSAIC: An Omni-Modal Benchmark for Long-Term Memory and Cross-Modal Reasoning in Conversational Agents** [[paper](https://arxiv.org/abs/2610.29249)] — *arXiv 2026.10* — Persona-grounded multi-session omni-modal memory with write/retrieve/deliver/read diagnosis. `#benchmark` `#memory` `#multimodal`
+- **MemBubble: Benchmarking How Agent Memory Shapes LLM Response Diversity** [[paper](https://arxiv.org/abs/2610.25127)] — *arXiv 2026.10* — Memory-driven personalization narrows response diversity (real-user preferences). `#benchmark` `#memory` `#personalization`
+- **HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory** [[paper](https://arxiv.org/abs/2610.24520)] — *arXiv 2026.10* — Inferring and applying user habits from weak longitudinal evidence, incl. exceptions and changes. `#benchmark` `#memory` `#personalization`
 - **VitaBench 2.0: Evaluating Personalized and Proactive Agents in Long-Term User Interactions** [[paper](https://arxiv.org/abs/2605.27141)] [[code](https://github.com/meituan-longcat/VitaBench-2.0)] — *arXiv 2026.05* — Long-term personalized & proactive agents in life-service environments; pluggable memory interface. `#benchmark` `#e2e` `#personalization` `#proactivity`
 - **$π$-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows** [[paper](https://arxiv.org/abs/2605.14678)] — *arXiv 2026.05* — Hidden intent + cross-session proactive assistance in long-horizon workflows. `#benchmark` `#e2e` `#proactivity`
 - **Ask Now, Use Later: Benchmarking the Proactivity Gap in Long-Lived LLM Agents** [[paper](https://arxiv.org/abs/2605.28108)] [[code](https://github.com/BUPT-GAMMA/ATRBench)] — *arXiv 2026.05* — ATRBench: ask-now-use-later proactivity gap for long-lived agents. `#benchmark` `#proactivity`
@@ -138,7 +158,7 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - **Evaluating Very Long-Term Conversational Memory of LLM Agents** [[paper](https://arxiv.org/abs/2402.17753)] — *ACL 2024 / arXiv 2024.02* — LoCoMo: very long multi-session conversational memory. `#benchmark` `#memory`
 - **VitaBench: Benchmarking LLM Agents with Versatile Interactive Tasks in Real-world Applications** [[paper](https://arxiv.org/abs/2509.26490)] — *arXiv 2025.09* — VitaBench 1.0 life-service interactive agent benchmark (precursor to 2.0). `#benchmark` `#e2e` `#harness`
 - **Personal Agent Eval (PersonalAgentEval)** [[blog](https://www.personalagenteval.com/blog/)] [[leaderboard](https://www.personalagenteval.com/)] — *2026* — Product-facing end-to-end eval of commercial personal agents (no arXiv long paper at listing time). `#benchmark` `#e2e` `#product`
-- **MemPABench** [[project](https://mempabench.com/)] — *2026* — Interaction-preference memory: when to clarify / confirm / act autonomously (project page; stable arXiv id pending). `#benchmark` `#personalization` `#memory`
+- **Why Bother Me Again? Benchmarking Personal Agent Memory for Interaction Preferences** [[paper](https://arxiv.org/abs/2610.30485)] [[project](https://mempabench.com/)] — *arXiv 2026.10* — MemPABench: interaction-preference memory, when to clarify / confirm / act autonomously. `#benchmark` `#personalization` `#memory`
 
 ## Contributing
 
