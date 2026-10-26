@@ -33,7 +33,7 @@ Safety is filed under **Harness**, not as a separate definition axis.
 - **Title** [[paper](https://arxiv.org/abs/XXXX.XXXXX)] [[code](https://github.com/...)] — *Venue YYYY.MM* — One-line note. `#tag1` `#tag2`
 ```
 
-4. Open a PR with the README diff (and LICENSE/CONTRIBUTING only if intentionally changing them).
+4. Commit the README diff directly to `master` (this repo prefers commits on `master`; no PR required for routine entry adds). Only touch LICENSE/CONTRIBUTING if intentionally changing them.
 
 ## Sections
 

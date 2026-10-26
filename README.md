@@ -1,6 +1,6 @@
 # Awesome Personal Agent
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Papers](https://img.shields.io/badge/entries-73-blue) ![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg) ![Last Updated](https://img.shields.io/badge/Updated-2026--10--24-green)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Papers](https://img.shields.io/badge/entries-75-blue) ![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg) ![Last Updated](https://img.shields.io/badge/Updated-2026--10--26-green)
 
 **A curated list of papers and benchmarks on personal agents** — assistants centered on a *specific user*, combining personalization and proactivity.
 
@@ -24,9 +24,9 @@ User ──►│                   │──► Personal Agent behavior
               Harness (env / tools / safety)
 ```
 
-**Last updated:** 2026-10-24 (Asia/Shanghai)
+**Last updated:** 2026-10-26 (Asia/Shanghai)
 
-**Stats:** 73 curated entries (starter set + weekly update 2026-10-24). Links checked against arXiv API and public project pages; do not invent ids.
+**Stats:** 75 curated entries (starter set + weekly update 2026-10-26). Links checked against arXiv API and public project pages; do not invent ids.
 
 ## Inclusion criteria
 
@@ -50,10 +50,10 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - [Inclusion criteria](#inclusion-criteria)
 - [0. Surveys (2)](#0-surveys)
 - [1. Personalization (7)](#1-personalization)
-- [2. Proactivity (12)](#2-proactivity)
+- [2. Proactivity (13)](#2-proactivity)
 - [3. Memory (10)](#3-memory)
 - [4. Harness (19)](#4-harness)
-- [5. Benchmarks (23)](#5-benchmarks)
+- [5. Benchmarks (24)](#5-benchmarks)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -84,6 +84,7 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - **When Should AI Chime In? Benchmarking Timely Contribution of Proactive Agents in Multi-Party Chat** [[paper](https://arxiv.org/abs/2610.25896)] — *arXiv 2026.10* — PITCH: human-judged timing of proactive contributions; models chime in too early when live. `#proactivity` `#timing` `#multi-party` `#benchmark`
 - **When Interpretations Persist: Downstream Influence in Gaze-Aware Assistants** [[paper](https://arxiv.org/abs/2610.25512)] — *arXiv 2026.10* — Retained interpretations of a user's activity shape later system-triggered outputs; evidence-bounded interpretation reduces harm. `#proactivity` `#memory` `#wearable` `#HCI`
 - **Ask Less, Ask Better: Allocating User Attention in Proactive LLM Agents with Interruption Budgets** [[paper](https://arxiv.org/abs/2610.24411)] — *arXiv 2026.10* — Interruption budgets + user-attention cost for clarification; memory of earlier answers yields better questions. `#proactivity` `#clarification` `#user-attention`
+- **MemoProAgent: Toward Memory-Driven Proactive Assistance** [[paper](https://arxiv.org/abs/2610.22671)] [[code](https://github.com/facebookresearch/Memo-Pro-Agent)] — *arXiv 2026.10* — Memory-driven proactive assistance over egocentric video + year-long personal memory; MemoProBench jointly scores content and timing; gated graph-memory harness (+ optional RL). `#proactivity` `#memory` `#harness` `#benchmark`
 - **Clarify the User or Verify the World? Uncertainty Routing for Proactive Agents** [[paper](https://arxiv.org/abs/2609.32255)] — *arXiv 2026.09* — Routes uncertainty to asking the user vs verifying the environment. `#proactivity` `#clarification` `#routing`
 - **Learning What to Ask for Tomorrow: Active Preference Acquisition for Long-Term Personalized Web Agents** [[paper](https://arxiv.org/abs/2610.31107)] — *arXiv 2026.10* — ActiveWebPref: ask preferences now for long-horizon web-agent reuse. `#proactivity` `#ask-now-use-later` `#web`
 - **Knowing but Not Showing: LLMs Recognize Ambiguity but Rarely Ask Clarifying Questions** [[paper](https://arxiv.org/abs/2605.25284)] — *arXiv 2026.05* — Shows models detect ambiguity yet under-ask clarifying questions. `#proactivity` `#clarification`
@@ -140,6 +141,7 @@ Each paper has **one** primary section; `#tags` capture cross-cutting facets.
 - **MOSAIC: An Omni-Modal Benchmark for Long-Term Memory and Cross-Modal Reasoning in Conversational Agents** [[paper](https://arxiv.org/abs/2610.29249)] — *arXiv 2026.10* — Persona-grounded multi-session omni-modal memory with write/retrieve/deliver/read diagnosis. `#benchmark` `#memory` `#multimodal`
 - **MemBubble: Benchmarking How Agent Memory Shapes LLM Response Diversity** [[paper](https://arxiv.org/abs/2610.25127)] — *arXiv 2026.10* — Memory-driven personalization narrows response diversity (real-user preferences). `#benchmark` `#memory` `#personalization`
 - **HABIT-Bench: Evaluating Habit Induction from Longitudinal Weak Evidence in Agent Memory** [[paper](https://arxiv.org/abs/2610.24520)] — *arXiv 2026.10* — Inferring and applying user habits from weak longitudinal evidence, incl. exceptions and changes. `#benchmark` `#memory` `#personalization`
+- **Memorizing Who, Knowing How: Benchmarking Personal and Procedural Memory for Persistent Assistants** [[paper](https://arxiv.org/abs/2610.20022)] [[code](https://github.com/QMMMS/PraxisMemBench)] — *arXiv 2026.10* — PraxisMemBench couples personal and procedural memory for harness-based persistent assistance; PraxisMem learns joint memory content and organization. `#benchmark` `#memory` `#procedural` `#harness` `#personalization`
 - **VitaBench 2.0: Evaluating Personalized and Proactive Agents in Long-Term User Interactions** [[paper](https://arxiv.org/abs/2605.27141)] [[code](https://github.com/meituan-longcat/VitaBench-2.0)] — *arXiv 2026.05* — Long-term personalized & proactive agents in life-service environments; pluggable memory interface. `#benchmark` `#e2e` `#personalization` `#proactivity`
 - **$π$-Bench: Evaluating Proactive Personal Assistant Agents in Long-Horizon Workflows** [[paper](https://arxiv.org/abs/2605.14678)] — *arXiv 2026.05* — Hidden intent + cross-session proactive assistance in long-horizon workflows. `#benchmark` `#e2e` `#proactivity`
 - **Ask Now, Use Later: Benchmarking the Proactivity Gap in Long-Lived LLM Agents** [[paper](https://arxiv.org/abs/2605.28108)] [[code](https://github.com/BUPT-GAMMA/ATRBench)] — *arXiv 2026.05* — ATRBench: ask-now-use-later proactivity gap for long-lived agents. `#benchmark` `#proactivity`
